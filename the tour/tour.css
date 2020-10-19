@@ -1,0 +1,555 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Vollkorn", serif;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+html{
+    font-size: 63%;
+}
+.center{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.container{
+    background-color: #fff;
+    margin: 3.5rem;
+    box-shadow: 0rem 1rem 3rem #6E6E6E;
+    overflow: hidden;
+}
+.container .header{
+    width: 100%;
+    height: calc(100vh-7rem);
+    background: linear-gradient(rgba(18,113,255,0.5),rgba(18,113,255,0.3)), url(./image/header-bg.jpg) center no-repeat;
+    perspective: 100rem;
+    background-size: cover;
+    position: relative;
+}
+.container .header .header-text{
+    text-align: center;
+    letter-spacing: 0.1rem;
+    text-shadow: 0.3rem 0.3rem #585858;
+    margin-top: 5rem;
+}
+.container .header .header-text .heading{
+    font-size: 5rem;
+    color: #fff;
+}
+.container .header .header-text .header-paragraph{
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #EFF5FB;
+    max-width: 70rem;
+    margin: auto;
+}
+.container .header .logo{
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+}
+.logo h1 {
+    display: flex;
+}
+.container .header .logo h1 span{
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #2E2EFE;
+    background-color: #fff;
+    width: 3rem;
+    height: 3rem;
+    margin: 0.3rem;
+    padding-top: 0.4rem;
+    padding-left: 0.8rem ;
+    border-radius: 50%;
+}
+.container .header .logo h1 span:nth-child(1) {
+    animation: drop-letter 4s linear 0.1s infinite;
+}
+.container .header .logo h1 span:nth-child(2) {
+    animation: drop-letter 4s linear 0.2s infinite;
+}
+.container .header .logo h1 span:nth-child(3) {
+    animation: drop-letter 4s linear 0.3s infinite;
+}
+.container .header .logo h1 span:nth-child(4) {
+    animation: drop-letter 4s linear 0.4s infinite;
+}
+.container .header .logo h1 span:nth-child(5) {
+    animation: drop-letter 4s linear 0.5s infinite;
+}.container .header .logo h1 span:nth-child(6) {
+    animation: drop-letter 4s linear 0.6s infinite;
+}
+.container .header .logo h1 span:nth-child(7) {
+    animation: drop-letter 4s linear 0.7s infinite;
+}
+@keyframes drop-letter {
+    0%{
+        transform: translateY(0);
+    }
+    10%{
+        transform: translateY(0);
+    }
+    15%{
+        transform: translateY(-100%);
+    }
+    20%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.container .header .header-image{
+    width: 35%;
+    animation: image3d 100s infinite;
+}
+@keyframes image3d{
+    0%{
+        transform: translateZ(20rem);
+        opacity: 1;
+    }
+    40%{
+        transform: translateZ(-400rem) translateX(150rem);
+        opacity: 0.8;
+    }
+    70%{
+        transform: translateZ(-1600rem) translateX(800rem);
+        opacity: 0.7;
+    }
+    80%{
+        transform: translateZ(-60rem) translateX(100rem);
+        opacity: 0.8;
+    }
+    100%{
+        transform: translateZ(40rem);
+        opacity: 0.9;
+    }
+}
+.container .popular-tours{
+    margin: 7.5rem 0 6rem;
+}
+.container .popular-tours .popular-tours-heading{
+    font-size:4rem ;
+    text-align: center;
+    margin-bottom: 8rem;
+    color: #2E64FE;
+    text-shadow: 0 0.2rem 0.2rem #58ACFA;
+    text-transform: capitalize;
+}
+.container .popular-tours .cards-wrapper {
+    justify-content: space-evenly;
+    display: flex;
+}   
+.container .popular-tours .cards-wrapper .card{
+    width: 35rem;
+    position: relative;
+    perspective: 150rem;
+}
+.container .popular-tours .cards-wrapper .card .front-side{
+    text-align: center;
+    background-color: #fff;
+    border-radius: 0.3rem;
+    position: relative;
+    z-index: 10;
+    opacity: 1;
+}
+.container .popular-tours .cards-wrapper .card .front-side .card-image{
+    width: 100%;
+    border-radius: 0.3rem 0.3rem 0 0; 
+}
+.popular-tours .cards-wrapper .card .front-side .tour-name{
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: absolute; 
+    top: 31%;
+    left: 1.5rem;
+    color: #fff;
+    text-shadow: 0 0 1rem #000;
+}
+.popular-tours .cards-wrapper .card .front-side .card-list{
+    width: 80%;
+    margin: auto;
+    padding: 2rem 0 3rem 0;
+}
+.popular-tours .cards-wrapper .card .front-side .card-list .card-list-item{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #2E2E2E;
+    margin: 2rem 0;
+    border-bottom: 0.1rem solid #2E64FE ;
+    padding-bottom:1.5rem;
+}
+.popular-tours .cards-wrapper .card .back-side{
+    position: absolute;
+    top: 0;
+    background-color: rgba(18,113,255,1);
+    width: 100%;
+    height: 100%;
+    border-radius: 0.3rem;
+    box-shadow: 0 3rem 4rem #6E6E6E;
+    flex-direction: column;
+    transform: translateZ(-5rem) translateX(2.8rem);
+    opacity: 0.8;
+}
+.popular-tours .cards-wrapper .card .back-side .tour-price{
+    font-size: 3.3rem;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 3rem;
+}
+.popular-tours .cards-wrapper .card .back-side .card-button{
+    color: rgba(18,113,255,1);
+    background-color: #fff;
+    border-radius: 5rem;
+    border: none;
+    font-size: 2rem;
+    padding: 0.8rem 1.7rem;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+    font-weight: 700;
+}
+.popular-tours .cards-wrapper .card .front-side .navigation-button,.back-side .navigation-button{
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    padding: 0.5rem;
+    background-color: rgba(255,255,255,0.8);
+    color: #2E2E2E;
+    border-radius: 0.3rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+}
+.change > .front-side{
+    transform: translateZ(-5rem) translateX(2.8rem);
+    box-shadow: 0 3rem 4rem #777;
+    /* opacity: 0; */
+    opacity: 0;
+    z-index: 0;
+}
+.change > .back-side{
+    transform: translateZ(0) translateX(0);
+    box-shadow: 0 0.5rem 2rem #aaa;
+    opacity:1; 
+    z-index: 10;
+}
+.stories{
+    padding: 6rem 0;
+    position: relative;
+}
+.stories .story-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.stories .story-wrapper .story-bg{
+    background-color: #bbb;
+    padding: 2.8rem;
+    margin: 2.8rem;
+    width: 70%;
+    box-shadow: 0 2rem 2rem rgba(51, 51, 51, 0.4);
+    transform: skewX(16deg);
+}
+.stories .story-wrapper .story-bg .story{
+    transform: skewX(-16deg);
+    display: flex;
+}
+.stories .story-wrapper .story-bg .story .story-image{
+    width: 18rem;
+    height:17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 3rem;
+}
+.stories .story-wrapper .story-bg .story .story-text .story-heading{
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: rgba(51, 51, 51, 0.9);
+    margin-bottom: 1rem;
+    letter-spacing: 0.2rem;
+}
+.stories .story-wrapper .story-bg .story .story-text .story-paragraph::first-letter{
+    margin-left: 2.4rem;
+    font-size: 1.9rem;
+}
+.stories .story-wrapper .story-bg .story .story-text .story-paragraph{
+    font-size: 1.6rem;
+    color: rgba(51, 51, 51, 0.9);
+}
+.stories .video-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+.stories .video-container .bg-video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.contact{
+    text-align: center;
+    padding: 17rem 0 15rem 0;
+    background: url(./image/cotco2.jpg) center no-repeat;
+    background-size: cover;
+}
+.contact .contact-heading{
+    font-size: 6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    color: #fff;
+    text-shadow: 0 1rem 2rem #000;
+    margin-bottom: 7rem;
+}
+.contact .contact-form{
+    width: 57rem;
+    height: 39rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: auto;
+    border-radius: 0.5rem;
+    flex-direction: column;
+    box-shadow: 0 1rem 3rem #000 ;
+    padding: 2rem;
+}
+.contact .contact-form .input-group{
+    width: 100%;
+    display: flex;
+    flex-direction:column ;
+    margin: 1.5rem 0;
+    position: relative;
+}
+.contact .contact-form .input-groups{
+    width: 100%;
+    display: flex; 
+    justify-content: space-between;
+}
+.contact .contact-form .input-groups .input-group{
+    width: 48.5%;
+}
+.input-group input,.input-group textarea{
+    padding: 3rem 1.2rem 1rem 1.2rem;
+    background-color:rgba(216, 216, 216, 0.8) ;
+    border: 0.1rem solid #D8D8D8;
+    color: #000;
+    font-size: 1.3rem;
+    border-radius: 0.6rem;
+}
+.input-group input:focus,.input-group textarea:focus{
+    border: 0.1rem solid #ccc;
+}
+.input-group label{
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: #424242;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+.contact .contact-form .form-btn{
+    width: 100%;
+    padding: 1rem;
+    font-size:1.6rem;
+    letter-spacing: 0.1rem;
+    color: #fff;
+    margin-top: .7rem;
+    border: none;
+    background-color:#0B6121;
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+.contact .contact-form .form-btn:hover{
+    background-color:#088A08 ;
+}
+.input-group textarea{
+    max-height: 13rem;
+    max-width: 100%;
+}
+.footer{
+    background-color: #585858;
+    padding: 3.5rem 0 2rem 0;
+}
+.footer .footer-list{
+    display: flex;
+    justify-content: center;
+}
+.footer .footer-list .footer-link{
+    font-size: 2rem;
+    color: #fff;
+    letter-spacing: 0.2rem;
+    margin: 0 1.8rem;
+    background-color:  #585858;
+    padding: 0.3rem 2.6rem;
+}
+.footer .footer-list .footer-link:hover{
+    transform: rotate(-8deg);
+    box-shadow: 0 2rem 3rem #000;
+}
+.footer  .footer-paragraph{
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    color: #04B431;
+    margin-top: 6rem ;
+}
+.nav{
+    position: relative;
+}
+.nav .nav-icon{
+    position: absolute;
+    top:3rem;
+    left: 3rem;
+    z-index: 10;
+    background-color:rgba(249, 226, 18, 0.8);
+    padding: 0 1.2rem;
+    font-size: 2.6rem;
+    font-weight: 600;
+    border: 0.1rem solid rgba(202, 98, 34, 0.9);
+    /* border-radius: 50%; */
+    cursor: pointer;
+}
+.nav .open-nav{
+    width: 20rem;
+    height: 27rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    z-index: 9;
+}
+.nav .open-nav ul li{
+    padding: 1.3rem ;
+    text-align: center;
+}
+.nav .open-nav ul li a{
+    color: #6E6E6E;
+    letter-spacing: 0.2rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.nav .open-nav ul li:hover a{
+    color: #0101DF;
+    text-shadow: 0 3rem 4rem 0 #61380B;
+}
+.hiden{
+    display: none;
+}
+.menu{
+    border-radius: 50%;
+}
+
+@media (max-width: 1200px){
+    .cards-wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        margin: 3rem 0;
+    }
+    .story-bg{
+        width: 85%;
+    }
+}
+@media (max-width:1000px){
+    .header-text{
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        z-index: 10;
+    }
+    .heading{
+        font-size: 3rem;
+    }
+    .header-paragraph{
+        font-size: 1.5rem;
+    }
+    .popular-tours-heading{
+        font-size: 5rem;
+    }
+    .story-bg{
+        transform: skewX(0);
+    }
+    .story{
+        transform: skewX(0);
+        flex-direction: column;
+        align-items: center;
+    }
+    .story-image{
+        margin-bottom: 3rem;
+    }
+    .story-heading{
+        margin-left: 4rem;
+    }
+    .story-text{
+        margin-left: 2.8rem;
+    }
+    .story-paragraph{
+        font-size: 1rem;
+    }
+    .footer-link{
+        padding: 0.2rem 2rem ;
+        margin: 0 1rem ;
+    }
+}
+@media (max-width:800px){
+    .header-paragraph{
+        display: none;
+    }
+    .popular-tours-heading{
+        font-size: 4.6rem;
+    }
+    .contact-form{
+        width: 90%;
+    }
+    .footer-list{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-link{
+        margin: 1rem;
+    }
+    .story-bg{
+        transform: skewX(0);
+    }
+    .story{
+        transform: skewX(0);
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width:650px){
+    .container{
+        margin: 0;
+    }
+    .nav-icon{
+        top: 2rem;
+        left: 2rem;
+    }
+    .header{
+        height:100vh;  
+    }
+    .contact-heading{
+        font-size: 4rem;
+    }
+    .contact-form{
+        padding: 2rem;
+        height: 40rem;        
+    }
+}
+@media (max-width:500px){
+    html{
+        font-size: 45%;
+    }
+}
